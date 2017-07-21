@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="3AS-Ji-B4h" customClass="MessageSendBar">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xrh-cn-TMq">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dca-j3-hFj">
+                        <rect key="frame" x="332" y="15" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="PHh-Up-Q6i"/>
+                            <constraint firstAttribute="width" constant="35" id="UHK-nb-dkn"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="send_BG"/>
+                        <connections>
+                            <action selector="send:" destination="3AS-Ji-B4h" eventType="touchUpInside" id="hqM-av-Y62"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="logBt_bg" translatesAutoresizingMaskIntoConstraints="NO" id="jxx-vf-Nag" customClass="LCIconTextField">
+                        <rect key="frame" x="8" y="17" width="314" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="w2q-hk-ms9"/>
+                        </constraints>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftSpace">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightSpace">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" red="0.41912636160850525" green="0.478382408618927" blue="0.9102216362953186" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="jxx-vf-Nag" firstAttribute="leading" secondItem="Xrh-cn-TMq" secondAttribute="leading" constant="8" id="3QT-z4-oZB"/>
+                    <constraint firstAttribute="trailing" secondItem="Dca-j3-hFj" secondAttribute="trailing" constant="8" id="Cla-tr-S8H"/>
+                    <constraint firstItem="Dca-j3-hFj" firstAttribute="leading" secondItem="jxx-vf-Nag" secondAttribute="trailing" constant="10" id="INs-ba-rDy"/>
+                    <constraint firstItem="Dca-j3-hFj" firstAttribute="centerY" secondItem="Xrh-cn-TMq" secondAttribute="centerY" id="SZk-pe-yeV"/>
+                    <constraint firstItem="jxx-vf-Nag" firstAttribute="centerY" secondItem="Xrh-cn-TMq" secondAttribute="centerY" id="tEW-Nf-Vu8"/>
+                </constraints>
+            </view>
+            <blurEffect style="light"/>
+            <connections>
+                <outlet property="messageBox" destination="jxx-vf-Nag" id="0GL-Tb-3Ce"/>
+                <outlet property="sendBt" destination="Dca-j3-hFj" id="emi-g1-3Oo"/>
+            </connections>
+            <point key="canvasLocation" x="-145.5" y="85"/>
+        </visualEffectView>
+    </objects>
+    <resources>
+        <image name="logBt_bg" width="162" height="45"/>
+        <image name="send_BG" width="79" height="71"/>
+    </resources>
+</document>

@@ -1,0 +1,22 @@
+//
+//  XMPPPrefix.pch
+//  XMPP
+//
+//  Created by 刘成 on 2017/7/19.
+//  Copyright © 2017年 刘成. All rights reserved.
+//
+
+#ifndef XMPPPrefix_pch
+#define XMPPPrefix_pch
+
+#define kHostName @"127.0.0.1"
+#define kHostPort 5222
+#define kDomain @"127.0.0.1"
+#define kResource @"iOS"
+#define kScreenBounds [UIScreen mainScreen].bounds
+#define kScreenSize [UIScreen mainScreen].bounds.size
+#define kScreenWidth kScreenSize.width
+#define kScreenHeight kScreenSize.height
+#import "UIView+Frame.h"
+#import "UIColor+Addition.h"
+#endif /* XMPPPrefix_pch */
